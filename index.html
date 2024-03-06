@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            // mobile
+            'se': {
+              'min': '375px', 'max': '1727px'
+            },
+            // desktop
+            'lg': { 'min': '1728px' },
+          },
+          colors: {
+            //bgcolor input text
+            'bgcolor': '#F7FBFF',
+            //border color
+            'linecolor': '#D4D7E3',
+            //urlcolorURL
+            'urlcolor': '#1E4AE9',
+            //footercolor
+            'footcolor': '#959CB6',
+          },
+          maxWidth: {
+            //custom max Width
+            'dwlogin': '104rem',
+            'mwlogin': '390px',
+          },
+          maxHeight: {
+            //custom max Height
+            'dhlogin': '67.25rem',
+          },
+          height: {
+            //custom height pict
+            'dpictlogin': '67.25rem',
+            'mpictlogin': '11.25rem',
+          },
+          width: {
+            //custom width pict
+            'dpictlogin': '51rem',
+            'mpictlogin': '342px',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="flex mx-auto justify-center items-center se:max-w-mlogin lg:max-w-login lg:px-4 lg:gap-x-8 lg:my-8">
+    <div class="grid se:grid-cols-1 se:mt-6 se:m-x-6 se:mb-7 lg:grid-cols-2 lg:gap-x-8 lg:flex flex-row-reverse ">
+      <div class="se:max-w-dwlogin lg:max-w-dwlogin lg:max-h-dhlogin"><img src="flower.png"
+          class="se:object-cover h-mpictlogin w-mpictlogin rounded-3xl lg:h-dpictlogin lg:w-dpictlogin">
+      </div>
+      <div class="se:mt-7 lg:flex lg:flex-col lg:max-h-dhlogin lg:max-w-dwlogin lg:px-36 lg:py-72">
+        <h1 class="font-semibold se:text-2xl lg:text-4xl">Welcome Back 👋</h1>
+        <p class="font-normal se:text-sm se:mt-4 lg:text-xl lg:mt-7">Today is a new day. It's your day. You
+          shape it.<br>
+          Sign in to start managing your projects.</p>
+        <form action="" method="post" class="flex flex-col se:mt-4 lg:mt-12">
+          <label class="mb-2 lg:text-base se:text-sm">Email</label>
+          <input
+            class="justify-center items-center se:py-3.5 se:pl-3.5 se:text-base border border-linecolor bg-bgcolor se:rounded-lg lg:py-4 lg:pl-4 lg:rounded-xl"
+            type="email" name="email" id="email" placeholder="Example@email.com">
+          <label class=" mb-2 se:mt-4 lg:text-base se:text-sm lg:mt-6">Password</label>
+          <input
+            class="justify-center items-center se:py-3.5 se:pl-3.5 se:text-base border border-linecolor bg-bgcolor se:rounded-lg lg:py-4 lg:pl-4 lg:rounded-xl"
+            type="password" name="password" id="email" placeholder="At least 8 characters">
+          <a href="#forgotPassword"
+            class="flex justify-end text-urlcolor se:my-4 se:text-sm lg:my-6 lg:text-base">Forgot
+            Password?</a>
+          <button type="submit"
+            class="bg-[#162D3A] text-white rounded-xl se:py-3.5 se:text-base lg:py-4 lg:text-xl">Sign
+            In</button>
+        </form>
+        <p class="text-center se:mt-6 se:text-base lg:mt-12 lg:text-lg">Don't you have an account? <a href="#signUp"
+            class="text-urlcolor">Sign
+            up</a></p>
+        <div class="text-center text-footcolor se:text-sm se:mt-44 lg:text-base lg:mt-36 ">
+          <p>&copy; 2023 ALL RIGHTS RESERVED</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
